@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "2e1b1a50-c5f0-4f69-97d2-a9811a47e547",
+		"name": "Bootcamp March 2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Serverless API POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "hpwDfGyoMGaefMGQAqAE49qEfz6UvfDI8JssMwYo"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Item\": {\r\n    \"titleId\": \"Who_wants_to_live_forever_1986\",\r\n    \"AlbumTitle\": \"A Kind of Magic\",\r\n    \"Artist\": \"Queen\",\r\n    \"SongTitle\": \"Who Wants to Live Forever\",\r\n    \"Year\": \"1986\"\r\n  },\r\n  \"ReturnConsumedCapacity\": \"TOTAL\",\r\n  \"TableName\": \"Music\"\r\n}"
+				},
+				"url": {
+					"raw": "https://b85slaclo9.execute-api.ap-southeast-2.amazonaws.com/default/HotDayRestMicroservice",
+					"protocol": "https",
+					"host": [
+						"b85slaclo9",
+						"execute-api",
+						"ap-southeast-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"HotDayRestMicroservice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Serverless API GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "hpwDfGyoMGaefMGQAqAE49qEfz6UvfDI8JssMwYo"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://<AWS instance>.amazonaws.com/default/HotDayRestMicroservice?TableName=Music",
+					"protocol": "https",
+					"host": [
+						"<AWS instance>",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"default",
+						"HotDayRestMicroservice"
+					],
+					"query": [
+						{
+							"key": "TableName",
+							"value": "Music"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
